@@ -31,7 +31,7 @@ router.post('/:id/actions', validateAction, (req, res) => {
 
 router.get('/', (req, res) => {
   // do your magic!
-  Projects.get(req.query)
+  Projects.get()
     .then(project => {
       res.status(200).json(project);
     })
