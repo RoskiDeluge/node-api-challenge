@@ -40,13 +40,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+  I learned how to use express to build RESTful urls and I learned how to create routers with express.
+
+
 - [ ] Describe Middleware?
+
+  Middleware are functions that receive a request and return a response. 
 
 - [ ] Describe a Resource?
 
+  A resource is data. Resources in the context of web development are typically described by nouns, "Users," "Projects," and so on.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+  An API can return the HTTP response codes to help the client know if the request was successful or not.
+
 - [ ] How can we partition our application into sub-applications?
+
+  We can use express router to create sub routes within our application. 
 
 ## Minimum Viable Product
 
