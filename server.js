@@ -10,8 +10,8 @@ server.use(express.json());
 
 server.use(helmet());
 
-// server.use('/api/projects', projectsRouter);
-// server.use('/api/actions', actionsRouter);
+server.use('/api/projects', projectsRouter);
+server.use('/api/actions', actionsRouter);
 
 server.get('/', (req, res) => {
   res.send(`<h2>Let's code a Node API</h2>`);
@@ -19,5 +19,11 @@ server.get('/', (req, res) => {
 
 
 
+function errorHandler(error, req, res, next) {
+  console.log('error: ', error.message);
+  res.status(400).json({ message: error.message });
+}
+
+server.use(errorHandler);
 
 module.exports = server;
